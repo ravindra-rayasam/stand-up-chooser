@@ -6,7 +6,7 @@ class Finished extends React.Component {
     displayFinished () {
         var listOfMembers = this.props.members.map ((person) => {
            return (
-               <div class='image-card' key={person}>{person}</div>
+               <div className='image-card finished-image-card' key={person}>{person}</div>
            );
         });
         return (
@@ -18,9 +18,9 @@ class Finished extends React.Component {
 
     render () {
         return (
-            <section>
+            <section className="turn-finished"> 
                 
-                <h2>finished member. </h2>
+                <h2>Turn finished </h2>
                 
                 {this.displayFinished()}
                 

@@ -12,7 +12,9 @@ class Waiting extends React.Component {
 
         // Display of last element is sometime issue as currentIndex value goes -ve. Hence ternary operator.
         let currentIndex =    Math.round(calIndVal > 0 ? calIndVal :0)  ; 
+        console.log('member length--'+this.props.members.length);
         this.props.onSelection(currentIndex);
+         
     }
 
     displayWaiting () {
@@ -22,7 +24,7 @@ class Waiting extends React.Component {
 
         var listOfMembers =this.props.members.map ((person) => {
            return ( 
-            <div key={person} class='image-card'>{person}</div>
+            <div key={person} className='image-card waiting-image-card'>{person}</div>
            );
         });
 
@@ -35,8 +37,11 @@ class Waiting extends React.Component {
 
     render () {
         return (
-            <section>
-                <a class="btn" href="#" onClick={(e) => this.chooseNextMember(e)}>Whose Turn Now?</a><br/>
+            <section >
+                <div>
+                <h2>Waiting</h2>
+                <a class="btn" href="#" onClick={(e) => this.chooseNextMember(e)}>Whose Turn?</a><br/>
+                </div>
                 {this.displayWaiting()}
             </section>
         );

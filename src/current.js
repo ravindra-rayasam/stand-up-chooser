@@ -1,15 +1,27 @@
 import React from 'react';
 
+const displayCurrent = (props)=> {
+    var listOfMembers = props.member.map ((person) => {
+       return (
+           <div className='image-card current-image-card' key={person}>{person}</div>
+       );
+    });
+    return (
+        <div>
+            {listOfMembers}
+        </div>    
+    );
+}
+
 //Functional Component 
 const Current = (props) =>{
     return (
-        <section>
+        <section> 
             <h2>
-            current member.  
+                Turn Now  
             </h2>
-            <div class='current image-card'>
-            {props.member}
-            </div>
+            
+            {displayCurrent(props)}            
         </section>
     );
 }

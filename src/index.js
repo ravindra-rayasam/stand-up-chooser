@@ -11,14 +11,16 @@ class App extends React.Component {
     // Initialize the state
     state = {
              allTeamMembers :['Ravindra','ZS','Rene','Lee','Hitesh'] ,
-             waiting : ['Ravindra','ZS','Rene','Lee','Hitesh'],
+             waiting : ['Ravindra','ZS','Rene','Lee','Hitesh','Lu','Sheryn','Weicheng','Patrick'],
              current:[],
              finished:[]
             };
     
     getCurrentMember = (currentIndex) => {
         const currentPerson = [this.state.waiting[currentIndex]];
-        
+        console.log(Array.isArray(currentPerson));
+        console.log(`current Person--${currentPerson}--${currentPerson.length}`);
+        console.log();
         /* 
 
         Set the state in following order 
