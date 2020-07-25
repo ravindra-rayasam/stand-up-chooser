@@ -39,8 +39,8 @@ class Waiting extends React.Component {
         return (
             <section >
                 <div>
-                <h2>Waiting</h2>
-                <a class="btn" href="#" onClick={(e) => this.chooseNextMember(e)}>Whose Turn?</a><br/>
+                
+                <h2><a class="btn" href="#" onClick={(e) => this.chooseNextMember(e)}>Whose Turn?</a><br/></h2>
                 </div>
                 {this.displayWaiting()}
             </section>

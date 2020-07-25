@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <header>
-            <h1> IMTS </h1>
+            <h1> My Team </h1>
             <h2>Stand Up</h2>
         </header>    
     )

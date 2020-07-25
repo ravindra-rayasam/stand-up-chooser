@@ -10,8 +10,8 @@ class App extends React.Component {
 
     // Initialize the state
     state = {
-             allTeamMembers :['Ravindra','ZS','Rene','Lee','Hitesh'] ,
-             waiting : ['Ravindra','ZS','Rene','Lee','Hitesh','Lu','Sheryn','Weicheng','Patrick'],
+             allTeamMembers :['Ravindra','Alex', 'Ambi','Amanda', 'James'] ,
+             waiting : ['Kov','Alex', 'Ambi','Amanda', 'James','Emma' , 'Emily','Ravindra', 'Paul'],
              current:[],
              finished:[]
             };
@@ -39,8 +39,9 @@ class App extends React.Component {
         this.setState ({current:[currentPerson]});
 
         // Update Wiating State
-        this.setState({waiting:this.state.waiting.filter((obj, index) => index !== currentIndex
-        )})
+        this.setState({waiting:(this.state.waiting.filter((obj, index) => index !== currentIndex
+        )).reverse()});
+
         
     }
 
